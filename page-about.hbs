@@ -1,0 +1,25 @@
+{{!< default}}
+
+{{#post}}
+<div class="col-md-12 header-post" style="background-position:50%;height:350px;background-image:url({{image}})">
+</div>
+
+<main class="content" role="main">
+	<div style="background: white" class="inner">
+
+	    <article class="{{post_class}}">
+
+			<header class="post-header">
+				<h1 class="post-title">{{{title}}}</h1>
+			</header>
+
+			<section class="post-content">
+				{{content}}
+			</section>
+
+	        {{/post}}
+
+	    </article>
+    </div>
+
+</main>

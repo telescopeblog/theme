@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>{{meta_title}}</title>
+	<meta name="description" content="{{meta_description}}" />
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="{{asset "css/indi.css"}}" /> {{ghost_head}}
+	<link rel="stylesheet" type="text/css" href="{{asset "css/dependencies.css"}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+
+	<link rel="shortcut icon" href="{{asset "img/favicon.ico"}}">
+</head>
+
+<body class="{{body_class}}">
+	<section id="wrapper">
+		<div id="ajax-container">
+			<nav id="nav" class="nav fixed-header">
+				<div class="nav-logo">
+					<a href="{{@blog.url}}">
+						<div class="row">
+							<div class="fixed-logo">
+								<img src="{{@blog.logo}}" alt="Logo" />
+							</div>
+							<div class="fixed-logo">
+								<span class="name" style="color: #36d995">{{@blog.title}}</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="nav-menu">
+					<a class="rss" href="{{@blog.url}}/rss/"><i class="icon-rss"></i></a>
+					{{#if @blog.navigation}}
+						<!--a class="menu" data-action="menu" data-target="menu"><i class="icon-menu"></i></a-->
+					{{/if}}
+				</div>
+			</nav>
+			{{{body}}}
+			<div id="body-class" style="display: none;" class="{{body_class}}"></div>
+			<footer id="footer">
+				<section class="credits">
+					<span class="credits-theme">Published by <a href="https://telescope-blog.herokuapp.com" target="_blank" rel="nofollow">Ghost</a></span>
+					<span class="credits-software">
+						<a href="{{@blog.url}}/about" target="_blank" rel="nofollow">About</a>
+						<a href="{{@blog.url}}/impressum" target="_blank" rel="nofollow"> | Impressum</a>
+						<a href="{{@blog.url}}/autoren" target="_blank" rel="nofollow"> | Autoren</a>
+					</span>
+				</section>
+			</footer>
+			{{#if @blog.navigation}}
+				{{navigation}}
+			{{/if}}
+		</div>
+	</section>
+	{{ghost_foot}}
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-79651543-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	<script type="text/javascript" src="{{asset "js/dependencies.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/script.js"}}"></script>
+</body>
+
+</html>
