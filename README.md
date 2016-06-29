@@ -3,11 +3,18 @@
 
 This is the theme for our blog: https://telescope-blog.herokuapp.com
 First install ghost on your system (Quick Start Install / Developer Install)
-Then switch into the ghost directory and create theme folder:
-`mkdir teletheme & cd teletheme``
-`git init`
-`git remote add origin https://github.com/user/repo.git`
 
+Then switch into the ghost directory (/content/themes) and create the theme folder:
+`mkdir teletheme & cd teletheme`
+Init empty git repository:
+`git init`
+Add remote to the repo and pull sources (just if you are contributor):
+`git remote add origin https://github.com/marc101101/telescope.git`
+`git pull origin master`
+Clone directory localy (if you are no contributor):
+`git clone https://github.com/marc101101/telescope.git`
+
+!!Restart ghost!!
 
 # Quick Start Install 
 (origin: https://github.com/TryGhost/Ghost)
