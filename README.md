@@ -1,6 +1,14 @@
 # TelescopeBlog Theme
 ![Ghost Screenshot](https://s3.eu-central-1.amazonaws.com/telescopeblog/2016/Jun/Bildschirmfoto_2016_06_29_um_20_29_19-1467225031491.png)
 
+This is the theme for our blog: https://telescope-blog.herokuapp.com
+First install ghost on your system (Quick Start Install / Developer Install)
+Then switch into the ghost directory and create theme folder:
+`mkdir teletheme & cd teletheme``
+`git init`
+`git remote add origin https://github.com/user/repo.git`
+
+
 # Quick Start Install 
 (origin: https://github.com/TryGhost/Ghost)
 
