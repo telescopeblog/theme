@@ -1,62 +1,79 @@
 # Bleak
 
-An elegant AJAX driven theme for [Ghost](http://github.com/tryghost/ghost/) by [Peter Amende](http://zutrinken.com/).
+# Quick Start Install 
+(origin: https://github.com/TryGhost/Ghost)
 
-***
+Make sure you've installed Node.js - We recommend the latest **Node v0.10.x** release. For other versions [click here](http://support.ghost.org/supported-node-versions/). May contain nuts.
 
-_**Hint:** This theme works with AJAX, so it won’t work with multiple domains properly! Use redirects to only one domain instead. Also make sure you haven’t jQuery injected in your footer due to [Ghosts migration method](http://dev.ghost.org/no-more-jquery/). This can break the layout!_
+1. Download the [latest release](https://ghost.org/developers/) of Ghost
+1. Unzip in the location you want to install
+1. Fire up a terminal
+1. `npm install --production`
+1. Start Ghost!
+    - Local environment: `npm start`
+    - On a server: `npm start --production`
+1. `http://localhost:2368/ghost` :tada:
 
-## Demo
+More [install docs](http://support.ghost.org/installation/) here in case you got stuck.
 
-* [Blog](http://bleak.zutrinken.com)
-* [Post](http://bleak.zutrinken.com/demo)
-* [Tags](http://bleak.zutrinken.com/tag/general)
-* [Author](http://bleak.zutrinken.com/author/zutrinken)
+<a name="getting-started"></a>
+# Developer Install (from git)
 
-## Features
+Install Node.js. (See [Supported Node.js versions](http://support.ghost.org/supported-node-versions/))
 
-* Responsive layout
-* Blog navigation
-* Post navigation
-* Cover images for blog, tag and author archives
-* Featured posts style
-* Automatic code syntax highlight and line numbers
-* Disqus support
-* Sharing buttons
+```bash
+# Node v0.10.x - recommended
+# Node v0.12.x and v4.2+ LTS - supported
+#
+# Choose wisely
+```
 
-## Setup
+Clone :ghost:
 
-To enable [Disqus](https://disqus.com/) comments go to your blogs code injection settings and add `<script>var disqus="YOUR_DISQUS_SHORTNAME";</script>` to your blog header.
+```bash
+git clone git://github.com/tryghost/ghost.git
+cd ghost
+```
 
-## Development
+Install grunt. No prizes here.
 
-Install [Grunt](http://gruntjs.com/getting-started/):
+```bash
+npm install -g grunt-cli
+```
 
-	npm install -g grunt-cli
-	
-Install Grunt modules:
+Install Ghost. If you're running locally, use [master](https://github.com/TryGhost/Ghost/tree/master). For production, use [stable](https://github.com/TryGhost/Ghost/tree/stable). :no_entry_sign::rocket::microscope:
 
-	npm install
+```bash
+npm install
+```
 
-Install [Bower](http://bower.io):
+Build the things!
 
-	npm install -g bower
+```bash
+grunt init
+```
 
-Install Bower components:
+Minify that shit for production?
 
-	bower install
+```bash
+grunt prod
+```
 
-Build Grunt project:
+Start your engines.
 
-	grunt
+```bash
+npm start
 
-Distribute Grunt project:
+## running production? Add --production
+```
 
-	grunt build
+Congrats! You made it. BTW you can also just `npm install ghost` if you're into that sort of thing. NPM aficionados can also read up on using [Ghost as an NPM module](https://github.com/TryGhost/Ghost/wiki/Using-Ghost-as-an-npm-module).
+
+More general [install docs](http://support.ghost.org/installation/) here in case you got stuck.
 
 ## Copyright & License
 
-Copyright (C) 2015-2016 Peter Amende - Released under the MIT License.
+Copyright (C) 2015-2016 Markus Guder - Released under the MIT License.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
