@@ -1,4 +1,5 @@
-# Bleak
+# TelescopeBlog Theme
+![Ghost Screenshot](https://s3.eu-central-1.amazonaws.com/telescopeblog/2016/Jun/Bildschirmfoto_2016_06_29_um_20_29_19-1467225031491.png)
 
 # Quick Start Install 
 (origin: https://github.com/TryGhost/Ghost)
