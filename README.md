@@ -4,6 +4,7 @@
 This is the theme for our blog: https://telescope-blog.herokuapp.com
 
 1.First install ghost on your system (Quick Start Install / Developer Install)
+
 2.Then switch into the ghost directory (/content/themes) and create the theme folder:
 ```bash 
 mkdir teletheme & cd teletheme
