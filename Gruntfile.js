@@ -19,7 +19,8 @@ module.exports = function(grunt) {
 				'bower_components/fitvids/jquery.fitvids.js',
 				'bower_components/highlightjs/highlight.pack.min.js',
 				'bower_components/nprogress/nprogress.js',
-				'bower_components/reading-time/build/readingTime.min.js'
+				'bower_components/reading-time/build/readingTime.min.js',
+        'bower_components/highcharts/highcharts.js'
 			],
 			'cssDependencies': [
 				'bower_components/normalize.css/normalize.css',
@@ -42,8 +43,8 @@ module.exports = function(grunt) {
 	                src: '*',
                     cwd: 'src/fonts/',
                     expand: true
-                }]		        
-	        } 
+                }]
+	        }
         },
         clean: {
             dist: ['assets']
