@@ -1,16 +1,17 @@
-<div id="menu" data-target="menu">
-	<div class="menu-header">
-		<span class="menu-label">Menu</span>
-		<a class="menu-close" data-action="menu" data-target="menu"></a>
-	</div>
-	{{#get "tags" limit="6" include="count.posts" order="count.posts desc" }}
-	<ul class="menu-list">
-		{{#foreach tags}}
-		<li class="menu-list-item">
-			<a class="menu-list-item" href="{{url absolute="true"}}">#{{name}}</a>
-		</li>
-		{{/foreach}}
-	</ul>
-		{{/get}}
+<div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        {{#foreach navigation}}
+            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+    </ul>
+    {{#if @labs.subscribers}}
+        <a class="subscribe-button" href="{{@blog.url}}/subscribe/">Subscribe</a>
+    {{else}}
+        <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
+    {{/if}}
 </div>
-<div class="overlay"></div>
+<span class="nav-cover"></span>

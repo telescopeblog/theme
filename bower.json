@@ -1,15 +1,31 @@
 {
-  "name": "bleak",
-  "devDependencies": {
-    "fitvids": "~1.1.0",
-    "highlightjs": "~8.8.0",
-    "history.js": "~1.8.0",
-    "imagesloaded": "~3.2.0",
-    "jquery": "~2.1.4",
-    "masonry": "~3.3.2",
-    "normalize.css": "~3.0.3",
-    "nprogress": "~0.2.0",
-    "reading-time": "~1.0.0",
-    "highcharts": "~4.2.6"
+  "name": "teletheme",
+  "version": "0.2.0",
+  "authors": [
+    "Markus Guder"
+  ],
+  "description": "A ghost theme for www.telescope.de",
+  "keywords": [
+    "bootstrap",
+    "theme"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "pages",
+    "index.html",
+    "/js"
+  ],
+  "main": [
+    "dist/css/sb-admin-2.css",
+    "dist/js/sb-admin-2.js"
+  ],
+  "dependencies": {
+    "flot": "~0.8.3",
+    "font-awesome": "~4.2.0",
+    "materialize": "~0.97.7"
   }
 }
