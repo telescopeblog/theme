@@ -20,25 +20,25 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 gulp.task('scripts', function() {
-  gulp.src('app/scripts/**/*.js')
-    .pipe(concat('cobetrace.min.js'))
+  gulp.src('assets/js/**/*.js')
+    .pipe(concat('tele.min.js'))
     .pipe($.uglify())
-    .pipe(gulp.dest(output_dir + '/js'))
+    .pipe(gulp.dest(output_dir + '/vendor/js'))
 
   gulp.src(jsLibArray)
     .pipe(concat('vendor.min.js'))
     .pipe($.uglify())
-    .pipe(gulp.dest(output_dir  + '/js'))
+    .pipe(gulp.dest(output_dir  + '/vendor/js'))
 });
 
 gulp.task('styles', function() {
-  gulp.src('app/styles/**/*.css')
-    .pipe(concat('cobetrace.min.css'))
+  gulp.src('assets/css/**/*.css')
+    .pipe(concat('tele.min.css'))
     .pipe($.if('*.css', $.cssnano({
       safe: true,
       autoprefixer: false
     })))
-    .pipe(gulp.dest(output_dir + '/css'))
+    .pipe(gulp.dest(output_dir + '/vendor/css'))
 
   gulp.src(cssLibArray)
     .pipe(concat('vendor.min.css'))
@@ -46,10 +46,10 @@ gulp.task('styles', function() {
       safe: true,
       autoprefixer: false
     })))
-    .pipe(gulp.dest(output_dir + '/css'))
+    .pipe(gulp.dest(output_dir + '/vendor/css'))
 
   gulp.src('bower_components/materialize/fonts/**/*')
-    .pipe(gulp.dest(output_dir + '/fonts'))
+    .pipe(gulp.dest(output_dir + '/vendor/fonts'))
 });
 
 function lint(files, options) {

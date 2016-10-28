@@ -17,10 +17,9 @@
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
     {{!-- Styles'n'Scripts --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
-    <link rel="stylesheet" type="text/css" href="{{asset "css/vendor.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "/vendor/css/vendor.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "/vendor/css/tele.min.css"}}" />
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
@@ -28,7 +27,8 @@
 <body class="{{body_class}} nav-closed">
 
     {{!-- The blog navigation links --}}
-    {{navigation}}
+
+    {{!-{{navigation}}
 
     <div class="site-wrapper">
 
@@ -39,7 +39,6 @@
         <footer class="site-footer clearfix">
             <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
             <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-            <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
         </footer>
 
     </div>
@@ -49,7 +48,9 @@
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
 
-    <script type="text/javascript" src="{{asset "js/vendor.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "/vendor/js/vendor.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "/vendor/js/tele.min.js"}}"></script>
+
 
 
 </body>
