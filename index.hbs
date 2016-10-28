@@ -3,34 +3,43 @@
 
 {{!-- The big featured header --}}
 
-<nav class="telescope_background">
+<nav class="telescope_background shadow_off">
     <div class="nav-wrapper">
         <img class="navbar_logo" src="{{@blog.logo}}" alt="Logo" />
         <a href="#" class="brand-logo">{{@blog.title}}</a>
-        {{#if @blog.logo}}
-            <!--a class="brand-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a-->
-        {{/if}}
-        {{#if @blog.navigation}}
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="subscribe.html"><i class="material-icons">email</i></a></li>
-                <li><a href="donate.html"><i class="material-icons">credit_card</i></a></li>
-            </ul>
-        {{/if}}
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="tag/Software"><i class="material-icons">search</i></a></li>
+            <li><a href="tag/Software"><i class="material-icons">email</i></a></li>
+            <li><a href="tag/Software"><i class="material-icons">add</i></a></li>
+        </ul>
+        <a href="#" data-activates="mobile-demo" class="button-collapse navbar_burger"><i class="material-icons">menu</i></a>
     </div>
 </nav>
-
-<!--div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">{{@blog.title}}</h1>
-            <h2 class="page-description">{{@blog.description}}</h2>
-        </div>
-    </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a-->
-
-
+<ul class="side-nav" id="mobile-demo">
+    <img src="{{asset "/vendor/img/navbar_mobile_header.png"}}" alt="navbar_mobile_header" />
+    <li><a><i class="material-icons">email</i> Mail</a></li>
+    <li><a><i class="material-icons">search</i> Search</a></li>
+    <li><a><i class="material-icons">add</i> Add</a></li>
+    <li><a href="tag/Software">#Software</a></li>
+    <li><a href="tag/Software">#Wirtschaft</a></li>
+    <li><a href="tag/Karriere">#Politk</a></li>
+    <li><a href="tag/Software">#Karriere</a></li>
+    <li><a href="tag/Software">#Games</a></li>
+    <li><a href="tag/Karriere">#Events</a></li>
+    <li><a href="tag/Karriere">#Plattentektonik</a></li>
+</ul>
+<nav class="telescope_background shadow_on navbar_upper">
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="tag/Software">#Software</a></li>
+        <li><a href="tag/Software">#Wirtschaft</a></li>
+        <li><a href="tag/Karriere">#Politk</a></li>
+        <li><a href="tag/Software">#Karriere</a></li>
+        <li><a href="tag/Software">#Games</a></li>
+        <li><a href="tag/Karriere">#Events</a></li>
+        <li><a href="tag/Karriere">#Plattentektonik</a></li>
+    </ul>
+</nav>
 {{!-- The main content area on the homepage --}}
 <main id="content" class="content" role="main">
-
-    {{!-- The tag below includes the post loop - partials/loop.hbs
     {{> "loop"}}
-    --}} </main>
+    </main>

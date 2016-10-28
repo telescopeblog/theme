@@ -40,13 +40,13 @@ gulp.task('styles', function() {
     })))
     .pipe(gulp.dest(output_dir + '/vendor/css'))
 
-  gulp.src(cssLibArray)
+  /*gulp.src(cssLibArray)
     .pipe(concat('vendor.min.css'))
     .pipe($.if('*.css', $.cssnano({
       safe: true,
       autoprefixer: false
     })))
-    .pipe(gulp.dest(output_dir + '/vendor/css'))
+    .pipe(gulp.dest(output_dir + '/vendor/css'))*/
 
   gulp.src('bower_components/materialize/fonts/**/*')
     .pipe(gulp.dest(output_dir + '/vendor/fonts'))
@@ -96,7 +96,7 @@ gulp.task('html', ['styles', 'scripts'], function() {
 });
 
 gulp.task('images', function() {
-  return gulp.src('app/images/**/*')
+  return gulp.src('assets/img/*')
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true,
@@ -106,7 +106,7 @@ gulp.task('images', function() {
         cleanupIDs: false
       }]
     })))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('assets/vendor/img'));
 });
 
 gulp.task('fonts', function() {
@@ -128,7 +128,7 @@ gulp.task('extras', function() {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], function() {
+gulp.task('serve', ['styles', 'scripts', 'images', 'fonts'], function() {
   gulp.watch([
     'app/*.html',
     'app/images/**/*',
