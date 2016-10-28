@@ -132,10 +132,11 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], function() {
   gulp.watch([
     'app/*.html',
     'app/images/**/*',
+    'assets/css/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('assets/css/*.css', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);

@@ -1,3 +1,9 @@
 .telescope_background{
   background-color: #36D995;
 }
+.navbar_logo{
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin:5px;
+}
